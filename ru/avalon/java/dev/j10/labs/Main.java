@@ -17,24 +17,34 @@ public class Main {
 		SelectionSort selectionSort = new SelectionSort();
 		ShellSort shellSort = new ShellSort();
 
+
 		int[] array = new int[20];
+		for (int i = 0; i < array.length; i++) {
+			fibonacciInitializer.initialize(array);
+		}
+		System.out.println("Фибоначчи: " + Arrays.toString(array));
 		int sum = 0;
 		for (int i = 0; i < 20; i++) {
 			fibonacciInitializer.initialize(array);
 			sum = sum + array[i];
 		}
-		// System.out.println(sum);
+		 System.out.println("Сумма: " + sum);
 
-/*
-Пузырьковая сортировка
- */
+
 		randomInitializer.initialize(array);
+		System.out.println("Рандом: " + Arrays.toString(array));
 		bubbleSort.sort(array);
-		// System.out.println(Arrays.toString(array));
+		 System.out.println("Пузырькорвая: " + Arrays.toString(array));
+
+		randomInitializer.initialize(array);
+		System.out.println("Рандом: " + Arrays.toString(array));
 		selectionSort.sort(array);
-		// System.out.println(Arrays.toString(array));
-		bubbleSort.sort(array);
-		// System.out.println(Arrays.toString(array));
+		 System.out.println("Выбором: " + Arrays.toString(array));
+
+		randomInitializer.initialize(array);
+		System.out.println("Рандом: " + Arrays.toString(array));
+		shellSort.sort(array);
+		 System.out.println("Шелла: " + Arrays.toString(array));
 
 		/*
 		 * TODO(Студент): Выполнить действия над массивом чисел
