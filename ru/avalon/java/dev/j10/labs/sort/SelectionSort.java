@@ -18,8 +18,19 @@ public class SelectionSort implements Sort {
      * {@inheritDoc}
      */
     public void sort(int[] array) {
-        /*
-         * TODO(Студент): Реализовать метод sort класса SelectionSort
-         */
+        int min, temp;
+
+        for (int index = 0; index < array.length - 1; index++) {
+            min = index;
+            for (int scan = index + 1; scan < array.length; scan++) {
+                if (array[scan] < array[min])
+                    min = scan;
+            }
+
+            // Swap the values
+            temp = array[min];
+            array[min] = array[index];
+            array[index] = temp;
+        }
     }
 }
